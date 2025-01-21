@@ -1,26 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace EP_01_01.Authentication
 {
     public partial class Reg : Window
     {
-
         private static readonly Regex LoginRegex = new Regex(@"^[a-zA-Z0-9]{6,}$");
         private static readonly Regex PasswordRegex = new Regex(@"^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{}|;:'"",.<>?/]{6,}$"); private readonly Entities db;
+        
         private bool isNav = false;
+
         public Reg()
         {
             InitializeComponent();
