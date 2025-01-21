@@ -1,0 +1,49 @@
+﻿<Page x:Class="EP_01_01.AdminPages.AddQuestion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EP_01_01.AdminPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="AddQuestion">
+
+    <Grid Background="White">
+
+        <StackPanel Orientation="Vertical" Width="500" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <Label Name="Header" Content="Добавление вопроса" Margin="0 0 0 20" HorizontalAlignment="Center" FontWeight="SemiBold" FontFamily="Verdana"/>
+
+            <Label Name="HeaderTest" Content="Тест" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <ComboBox x:Name="UserTests" FontSize="18" FontWeight="Normal" Height="25"/>
+
+
+            <Label Name="HeaderDifficulty" Content="Сложность вопроса" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="HeaderDifficultyBox" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25"/>
+
+            <Label Name="HeaderQuestion" Content="Вопрос" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="HeaderQuestionBox" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25"/>
+
+            <Label Name="HeaderAnswer1" Content="Ответ 1" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="HeaderAnswer1Box" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25"/>
+
+            <Label Name="HeaderAnswer2" Content="Ответ 2" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="HeaderAnswer2Box" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25"/>
+
+            <Label Name="HeaderAnswer3" Content="Ответ 3" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="HeaderAnswer3Box" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25"/>
+
+            <Label Name="HeaderAnswer4" Content="Ответ 4" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="HeaderAnswer4Box" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25"/>
+
+            <Label Name="HeaderCorrectAnswer" Content="Правильный ответ" Margin="0 0 0 5" FontWeight="Normal" FontSize="18"/>
+            <TextBox x:Name="CorrectAnswerBox" FontSize="16" FontWeight="Normal" FontFamily="Verdana" Foreground="DarkSlateGray" Height="25" Margin="0 0 0 20"/>
+
+
+
+            <Button x:Name="BtnSave" Content="Сохранить" Click="BtnSave_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

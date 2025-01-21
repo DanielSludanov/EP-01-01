@@ -67,8 +67,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminPages\AddQuestion.xaml.cs">
+      <DependentUpon>AddQuestion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPages\AddTest.xaml.cs">
       <DependentUpon>AddTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Questions.xaml.cs">
+      <DependentUpon>Questions.xaml</DependentUpon>
     </Compile>
     <Compile Include="AdminPages\Tests.xaml.cs">
       <DependentUpon>Tests.xaml</DependentUpon>
@@ -112,7 +118,15 @@
     <Compile Include="User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Page Include="AdminPages\AddQuestion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminPages\AddTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPages\Questions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

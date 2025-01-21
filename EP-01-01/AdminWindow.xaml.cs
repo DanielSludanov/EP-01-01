@@ -28,14 +28,6 @@ namespace EP_01_01
             FrameManager.MainFrame = MainFrame;
         }
 
-
-
-
-
-
-
-
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (isNav)
@@ -56,7 +48,7 @@ namespace EP_01_01
 
         private void BtnQuesitons_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameManager.MainFrame.Navigate(new Uri("AdminPages/Questions.xaml", UriKind.Relative));
         }
 
         private void BtnReports_Click(object sender, RoutedEventArgs e)
