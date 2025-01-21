@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EP_01_01.Authentication"
         mc:Ignorable="d"
-        Title="Reg" Height="450" Width="800">
+        Title="Регистрация" Height="800" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
-        
+        <StackPanel Orientation="Vertical" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Label Name="Header" Content="Регистрация" Margin="0 0 0 20" HorizontalAlignment="Center" FontSize="24"  FontWeight="SemiBold"/>
+
+            <Label Name="Login" Content="Логин" Margin="0 0 0 5"/>
+            <TextBox x:Name="UserLogin" Height="25" VerticalContentAlignment="Center" FontSize="16" Margin="0 0 0 10" Foreground="DarkSlateGray" FontWeight="Normal" MaxLength="50"/>
+
+            <Label Name="Password" Content="Пароль" Margin="0 0 0 5"/>
+            <PasswordBox x:Name="UserPassword" Height="25" VerticalContentAlignment="Center" FontSize="16" Margin="0 0 0 10" Foreground="DarkSlateGray" MaxLength="50"/>
+
+            <Label Name="Roles" Content="Роль" Margin="0 0 0 5"/>
+            <ComboBox x:Name="UserRoles" Height="30" FontFamily="Verdana" FontSize="16" FontWeight="Normal" Margin="0 0 0 20" VerticalContentAlignment="Center"/>
+
+            <Button x:Name="BtnLogin" Content="Создать аккаунт" Margin="0 0 0 20" Click="BtnLogin_Click"  Width="200"/>
+
+            <TextBlock HorizontalAlignment="Center">
+        <Run Text="Есть аккаунт?" FontSize="16" FontWeight="Medium" FontFamily="Verdana" Foreground="#1f1f1f"/>
+        <Hyperlink x:Name="LinkToAuthWindow" FontSize="16" FontFamily="Verdana" FontWeight="Medium" Foreground="#2f2f2f" Click="LinkToAuthWindow_Click">Авторизоваться</Hyperlink>
+            </TextBlock>
+
+
+        </StackPanel>
     </Grid>
 </Window>

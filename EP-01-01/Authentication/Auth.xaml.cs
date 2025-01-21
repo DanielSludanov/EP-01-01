@@ -26,6 +26,12 @@ namespace EP_01_01.Authentication
 
             try
             {
+                if ((string.IsNullOrEmpty(login)) &&  (string.IsNullOrEmpty(password)))
+                {
+                    MessageBox.Show("Заполните все поля, чтобы авторизоваться в систему!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                
                 if (!LoginRegex.IsMatch(login))
                 {
                     MessageBox.Show("Логин введён неверно!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -49,22 +55,40 @@ namespace EP_01_01.Authentication
                 }
 
                 MessageBox.Show("Вы авторизовались в систему!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-                isNav = true;
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
+
+                ((App)Application.Current).CurrentUserID = usersToCheck.ID;
+
+                if (usersToCheck.Role == 1)
+                {
+                    isNav = true;
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                }
+                else if (usersToCheck.Role == 2)
+                {
+                    MessageBox.Show("Привет препод");
+                }
+                else
+                {
+                    isNav = true;
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                }
+
 
             }
             catch (InvalidOperationException invalidOpEx)
             {
-                MessageBox.Show($"Ошибка операкции: {invalidOpEx}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка операции: {invalidOpEx}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void LinkToRegWindow_Click(object sender, RoutedEventArgs e)
         {
             isNav = true;
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            Reg reg = new Reg();
+            reg.Show();
             this.Close();
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
