@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67ccea3c34594f52a9fe10d9921eafda" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Question" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Student" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.StudyGroup" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TestQuestion" Width="1.5" PointX="8.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TestReport" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Test" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__TestQuest__Quest__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__TestRepor__Quest__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Users__Role__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Students__StudyG__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Students__UserID__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__TestQuest__TestI__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__TestRepor__Stude__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__TestRepor__TestI__4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
