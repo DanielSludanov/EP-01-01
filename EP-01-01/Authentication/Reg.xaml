@@ -17,6 +17,7 @@
             <Label Name="Password" Content="Пароль" Margin="0 0 0 5"/>
             <PasswordBox x:Name="UserPassword" Height="25" VerticalContentAlignment="Center" FontSize="16" Margin="0 0 0 10" Foreground="DarkSlateGray" MaxLength="50"/>
 
+            <!--Yo-->
             <Label Name="Roles" Content="Роль" Margin="0 0 0 5"/>
             <ComboBox x:Name="UserRoles" Height="30" FontFamily="Verdana" FontSize="16" FontWeight="Normal" Margin="0 0 0 20" VerticalContentAlignment="Center"/>
 
